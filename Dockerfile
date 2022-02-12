@@ -7,8 +7,6 @@ WORKDIR /minecraft
 COPY docker-entrypoint.sh .
 COPY start.sh .
 
-RUN apt update && apt install screen -y
-
 RUN mkdir -p ./build ./plugins ./data \
     && curl -o ./build/BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar \
     && curl -o ./plugins/Geyser-Spigot.jar https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar \
