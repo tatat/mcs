@@ -12,6 +12,7 @@ RUN mkdir -p ./build ./plugins ./data
 ADD https://hub.spigotmc.org/jenkins/job/BuildTools/146/artifact/target/BuildTools.jar ./build/BuildTools.jar
 ADD https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/1028/artifact/bootstrap/spigot/target/Geyser-Spigot.jar ./plugins/Geyser-Spigot.jar
 ADD https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/63/artifact/spigot/target/floodgate-spigot.jar ./plugins/floodgate-spigot.jar
+ADD https://github.com/Camotoy/GeyserSkinManager/releases/download/1.6/GeyserSkinManager-Spigot.jar ./plugins/GeyserSkinManager-Spigot.jar
 
 ENV SPIGOT_VERSION "${SPIGOT_VERSION}"
 

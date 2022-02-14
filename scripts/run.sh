@@ -54,6 +54,7 @@ docker run -it \
   -v "$PWD/plugins/Geyser-Spigot:/minecraft/plugins/Geyser-Spigot" \
   -v "$PWD/plugins/PluginMetrics:/minecraft/plugins/PluginMetrics" \
   -v "$PWD/plugins/floodgate:/minecraft/plugins/floodgate" \
+  -v "$PWD/plugins/GeyserSkinManager:/minecraft/plugins/GeyserSkinManager" \
   -v "$PWD/data:/minecraft/data" \
   -p 19132-19133:19132-19133/udp \
   -p 25565:25565 \
