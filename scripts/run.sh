@@ -55,6 +55,10 @@ docker run -it \
   -v "$PWD/plugins/PluginMetrics:/minecraft/plugins/PluginMetrics" \
   -v "$PWD/plugins/floodgate:/minecraft/plugins/floodgate" \
   -v "$PWD/plugins/GeyserSkinManager:/minecraft/plugins/GeyserSkinManager" \
+  -v "$PWD/plugins/Multiverse-Core:/minecraft/plugins/Multiverse-Core" \
+  -v "$PWD/plugins/Multiverse-Portals:/minecraft/plugins/Multiverse-Portals" \
+  -v "$PWD/plugins/bStats:/minecraft/plugins/bStats" \
+  -v "$PWD/plugins/PluginMetrics:/minecraft/plugins/PluginMetrics" \
   -v "$PWD/data:/minecraft/data" \
   -p 19132-19133:19132-19133/udp \
   -p 25565:25565 \

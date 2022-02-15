@@ -1,4 +1,16 @@
-# Paper + Geyser + Floodgate
+# Minecraft Server
+
+## Server
+
+- [PaperMC](https://papermc.io/)
+
+## Plugins
+
+- [GeyserMC](https://geysermc.org/)
+- [Floodgate](https://github.com/GeyserMC/Floodgate)
+- [GeyserSkinManager](https://github.com/Camotoy/GeyserSkinManager)
+- [Multiverse-Core](https://github.com/Multiverse/Multiverse-Core)
+- [Multiverse-Portals](https://github.com/Multiverse/Multiverse-Portals)
 
 ## Build
 
