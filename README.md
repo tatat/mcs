@@ -1,9 +1,9 @@
-# Spigot + Geyser + Floodgate
+# Paper + Geyser + Floodgate
 
 ## Build
 
 ```sh
-docker build --build-arg SPIGOT_VERSION=1.18.1 -t mc:latest .
+docker build -t mc:latest .
 ```
 
 ## Run

@@ -29,13 +29,13 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-SPIGOT_JAR="$(find "$BASE_DIR/build" -mindepth 1 -maxdepth 1 -name "spigot-*.jar" | sort | tail -1)"
+PAPER_JAR="$(find "$BASE_DIR" -mindepth 1 -maxdepth 1 -name "paper-*.jar" | sort | tail -1)"
 
-if [ -z "$SPIGOT_JAR" ]; then
-  echo "Error: Couldn't find spigot-*.jar" >&2
+if [ -z "$PAPER_JAR" ]; then
+  echo "Error: Couldn't find paper-*.jar" >&2
   exit 1
 fi
 
 cd "$BASE_DIR/data"
 
-java -Xms$MIN_MEMORY_SIZE -Xmx$MAX_MEMORY_SIZE -XX:+UseG1GC -jar $SPIGOT_JAR --plugins "$BASE_DIR/plugins" nogui
+java -Xms$MIN_MEMORY_SIZE -Xmx$MAX_MEMORY_SIZE -XX:+UseG1GC -jar "$PAPER_JAR" --plugins "$BASE_DIR/plugins" --nogui

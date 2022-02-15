@@ -1,24 +1,17 @@
 FROM openjdk:17-jdk-bullseye
 
-ARG SPIGOT_VERSION
-
 WORKDIR /minecraft
 
-COPY docker-entrypoint.sh .
 COPY start.sh .
 
-RUN mkdir -p ./build ./plugins ./data
+RUN mkdir -p ./plugins ./data
 
-ADD https://hub.spigotmc.org/jenkins/job/BuildTools/146/artifact/target/BuildTools.jar ./build/BuildTools.jar
+ADD https://papermc.io/api/v2/projects/paper/versions/1.18.1/builds/197/downloads/paper-1.18.1-197.jar paper-1.18.1-197.jar
 ADD https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/1029/artifact/bootstrap/spigot/target/Geyser-Spigot.jar ./plugins/Geyser-Spigot.jar
 ADD https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/63/artifact/spigot/target/floodgate-spigot.jar ./plugins/floodgate-spigot.jar
 ADD https://github.com/Camotoy/GeyserSkinManager/releases/download/1.6/GeyserSkinManager-Spigot.jar ./plugins/GeyserSkinManager-Spigot.jar
 
-ENV SPIGOT_VERSION "${SPIGOT_VERSION}"
-
 EXPOSE 25565
 EXPOSE 19132/udp
-
-ENTRYPOINT [ "./docker-entrypoint.sh" ]
 
 CMD [ "./start.sh" ]
