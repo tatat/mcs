@@ -30,7 +30,7 @@ or
 
 ```sh
 curl -O https://raw.githubusercontent.com/tatat/mcs/main/scripts/run.sh \
-  && bash ./run.sh --image ta2t/mcs:1.18.1 --name mcs --ms 2G --mx 4G --detach-keys "ctrl-a,d"
+  && bash ./run.sh --image ta2t/mcs:1.18.2 --name mcs --ms 2G --mx 4G --detach-keys "ctrl-a,d"
 ```
 
 NOTE: Make sure to update `./data/eula.txt`.
