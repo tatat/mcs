@@ -49,14 +49,24 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
+mkdir -p "$PWD/plugins/Geyser-Spigot"
+mkdir -p "$PWD/plugins/PluginMetrics"
+mkdir -p "$PWD/plugins/floodgate"
+mkdir -p "$PWD/plugins/GeyserSkinManager"
+mkdir -p "$PWD/plugins/Multiverse-Core"
+mkdir -p "$PWD/plugins/Multiverse-Portals"
+mkdir -p "$PWD/plugins/bStats"
+mkdir -p "$PWD/plugins/PluginMetrics"
+mkdir -p "$PWD/data"
+
 docker run -it \
   ${OPTIONS[@]+"${OPTIONS[@]}"} \
   -v "$PWD/plugins/Geyser-Spigot:/minecraft/plugins/Geyser-Spigot" \
   -v "$PWD/plugins/PluginMetrics:/minecraft/plugins/PluginMetrics" \
   -v "$PWD/plugins/floodgate:/minecraft/plugins/floodgate" \
   -v "$PWD/plugins/GeyserSkinManager:/minecraft/plugins/GeyserSkinManager" \
-  -v "$PWD/plugins/Multiverse-Core:/minecraft/plugins/Multiverse-Core" \
-  -v "$PWD/plugins/Multiverse-Portals:/minecraft/plugins/Multiverse-Portals" \
+  -v "$PWD/plugins/multiverse-core:/minecraft/plugins/Multiverse-Core" \
+  -v "$PWD/plugins/multiverse-portals:/minecraft/plugins/Multiverse-Portals" \
   -v "$PWD/plugins/bStats:/minecraft/plugins/bStats" \
   -v "$PWD/plugins/PluginMetrics:/minecraft/plugins/PluginMetrics" \
   -v "$PWD/data:/minecraft/data" \
